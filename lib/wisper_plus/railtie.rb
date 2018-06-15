@@ -2,7 +2,8 @@ require 'rails'
 
 class WisperPlus::Railtie < Rails::Railtie
 
-  intiailizer do
+  config.after_initialize do
+
     # Link any Models to their <Model>Subscriber class
     Dir.glob(Rails.root.join('app/models/**/*.rb').to_s) do |filename|
       next if filename.index('/concerns/')
@@ -22,6 +23,7 @@ class WisperPlus::Railtie < Rails::Railtie
         # ignore
       end
     end
+
   end
 
 end
