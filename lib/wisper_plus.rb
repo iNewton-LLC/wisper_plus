@@ -18,7 +18,12 @@ module Wisper
         after_commit :broadcast_destroy, on: :destroy
       end
 
-      private
+      def broadcast(*args)
+        super
+      end
+      alias publish broadcast
+
+      protected
 
         # broadcast MODEL_created event to subscribed listeners
         def broadcast_create
