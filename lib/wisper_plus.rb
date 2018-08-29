@@ -34,7 +34,7 @@ module Wisper
         # pass the set of changes for background jobs to know what changed
         # see https://github.com/krisleech/wisper-activerecord/issues/17
         def broadcast_update
-          broadcast(:after_update, self, previous_changes.with_indifferent_access) if previous_changes.any?
+          broadcast(:after_update, self) if self.saved_changes?
         end
 
         # broadcast MODEL_destroyed to subscribed listeners
