@@ -72,7 +72,6 @@ module Wisper
                 e
               end
             end
-            ap event
             listener&.public_send(event, *args)
           end
         end
@@ -85,9 +84,9 @@ module Wisper
         end
       end
     end
+    Wisper::ActiveJobBroadcaster.register
   end
 
-  Wisper::ActiveJobBroadcaster.register
 end
 
 
