@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.5
+- allow Rails 6
+
 ## 0.1.4
 - allow multiple subscribers to subscribe to a model
 - fix global subscriber
