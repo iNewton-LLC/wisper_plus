@@ -31,9 +31,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", ">= 1.16", '< 3.0'
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", ">= 12.3.3"
 
-  spec.add_runtime_dependency 'activesupport', '>= 3', '< 6.1'
+  spec.add_runtime_dependency 'activesupport', ">= 6.0.3.1"
 
   spec.add_dependency 'wisper', '>= 1.6', '< 3.0'
 end
